@@ -1,0 +1,26 @@
+GET http://localhost:3333
+
+###
+GET http://localhost:3333/api/users
+
+###
+POST http://localhost:3333/api/users
+Content-Type: application/json
+
+{
+    "name": "sample"
+}
+
+###
+GET http://localhost:3333/api/files
+
+###
+POST http://localhost:3333/api/users/upload
+Content-Type: multipart/form-data; boundary=---011000010111000001101001
+
+---011000010111000001101001
+Content-Disposition: form-data; name="file"; filename="users.xlsx"
+Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+< ../../../assets/users.xlsx
+---011000010111000001101001--

@@ -1,0 +1,21 @@
+version: "3.8"
+
+networks:
+  my_network:
+    driver: bridge
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: ./src/infra/docker/Dockerfile
+    container_name: cms-server
+    ports:
+      - "3333:3333"
+    volumes:
+      - ./src:/usr/src/app/src
+      - ../assets:/usr/src/app/assets
+    environment:
+      - NODE_ENV=test
+    networks:
+      - my_network

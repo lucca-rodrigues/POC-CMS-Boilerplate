@@ -1,0 +1,20 @@
+version: '3.8'
+
+networks:
+  my_network:
+    driver: bridge
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: ./src/infra/docker/Dockerfile
+    container_name: cms-app
+    ports:
+      - '80:80'
+    volumes:
+      - ./front:/usr/src/app
+    # environment:
+    #   - NODE_ENV=production
+    networks:
+      - my_network

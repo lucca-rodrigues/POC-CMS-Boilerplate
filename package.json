@@ -1,0 +1,17 @@
+{
+  "name": "boilerplate-cms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "commit": "git add . && npx git-cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@ssh.dev.azure.com:v3/lanlink-bt/BT%20-%20ARQUITETURA/BOILERPLATE%20-%20CMS"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "git-cz": "^4.9.0"
+  }
+}

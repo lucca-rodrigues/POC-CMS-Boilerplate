@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    // "strict": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+
+    "paths": {
+      "@root/*": ["./src/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@pages": ["./src/*"],
+      "@components": ["./src/components"],
+      "@components/*": ["./src/components/*"],
+      "@contexts/*": ["./src/contexts/*"],
+      "@infra/*": ["./src/infra/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@domain/*": ["./src/domain/*"],
+      "@assets/*": ["./src/assets/*"]
+    },
+    "types": ["cypress", "@testing-library/cypress"],
+    "typeRoots": ["./node_modules/@types", "./cypress"]
+  },
+  "include": [
+    "next-env.d.ts",
+    "src",
+    ".next/types/**/*.ts",
+    "plopfile.ts",
+    "cypress.d.ts",
+    "cypress/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "*.spec.tsx",
+    "*.spec.ts",
+    "*.spec.*",
+    "*.cy.*",
+    "cypress/*",
+    "./src/pages/sample/*",
+    "./src/domain/accounts/*"
+  ],
+
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

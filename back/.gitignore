@@ -1,0 +1,9 @@
+.idea/
+node_modules/
+build/
+tmp/
+temp/
+.env
+*.db
+coverage
+package-lock.json
